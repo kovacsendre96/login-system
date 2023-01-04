@@ -1,0 +1,1 @@
+import{a as s}from"./axios-c0bebe37.js";import{r,o as a}from"./index-293bc98f.js";class c{async index(){return s.get("/api/user").then(function(e){console.log(e)}).catch(function(e){console.log(e)})}}const _={__name:"HomeView",setup(n){const e=new c,o=r();return a(async()=>{o.value=await e.index(),console.log(o.value)}),(t,i)=>"HOME VIEW"}};export{_ as default};

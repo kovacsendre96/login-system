@@ -1,0 +1,1 @@
+import{r as s,o,a as r,c,t,b as l,U as u}from"./index-db4a9003.js";const _={key:0},f={__name:"HomeView",setup(i){const n=new u,e=s({first_name:"",last_name:""}),a=s(!0);return o(async()=>{e.value=await n.index(),a.value=!1,console.log(e.value)}),(m,v)=>a.value?l("",!0):(r(),c("h1",_,"Üdv neked "+t(e.value.first_name)+" "+t(e.value.last_name),1))}};export{f as default};
