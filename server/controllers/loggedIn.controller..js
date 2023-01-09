@@ -11,6 +11,7 @@ const loggedIn = (req, res, next) => {
     );
     db.query("SELECT * FROM users WHERE id =?", [decoded.id], (err, result) => {
       if (err) {
+        console.log("login error: ", err);
         return next();
       }
       req.user = result[0];
