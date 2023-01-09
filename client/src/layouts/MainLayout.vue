@@ -1,8 +1,10 @@
 <template>
-  <Navbar />
-  <div class="pa-0">
-    <router-view />
-  </div>
+  <Navbar>
+    <template v-slot:content>
+      <router-view />
+    </template>
+  </Navbar>
+  <div class="pa-0"></div>
 </template>
 
 <script setup>

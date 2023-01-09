@@ -49,12 +49,6 @@
             Regisztráció
           </v-btn>
         </v-col>
-        <v-col cols="12">
-          Van már fiókod?
-          <RouterLink v-if="!user" class="ma-2" :to="{ name: 'Login' }"
-            >Bejelentkezés</RouterLink
-          >
-        </v-col>
       </v-row>
     </v-container>
     <SnackBar

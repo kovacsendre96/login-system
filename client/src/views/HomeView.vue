@@ -1,17 +1,12 @@
 <template>
-  <v-card
-    v-if="!user && !loading"
-    class="mx-auto"
-    width="400"
-    prepend-icon="mdi-home"
-  >
+  <v-card v-if="!user && !loading" class="mx-auto w-75">
     <template v-slot:title> Üdvözöllek </template>
     <v-card-text
       >A tartalom eléréséhez jelentkezz be vagy hozz létre új fiókot
     </v-card-text>
   </v-card>
 
-  <v-card v-else class="mx-auto" width="400" prepend-icon="mdi-home">
+  <v-card v-else class="mx-auto w-75">
     <template v-slot:title> Üdvözöllek </template>
 
     <v-card-text> {{ user.first_name }} {{ user.last_name }} </v-card-text>
