@@ -77,16 +77,20 @@ const menuPosition = ref("left");
 const getUser = async () => {
   user.value = await userService.index();
 };
-
+const resize = (width) => {
+  if (window.innerWidth < 768) {
+    menuPosition.value = "top";
+  } else {
+    menuPosition.value = "left";
+  }
+};
 onMounted(async () => {
   await getUser();
   loading.value = false;
+  resize(window.innerWidth);
   window.addEventListener("resize", (e) => {
-    if (e.target.innerWidth < 768) {
-      menuPosition.value = "top";
-    } else {
-      menuPosition.value = "left";
-    }
+    const innerWidth = e.target.innerWidth;
+    resize(innerWidth);
   });
 });
 
