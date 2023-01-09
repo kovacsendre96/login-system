@@ -12,11 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://login-system-plum.vercel.app",
-      "https://login-system-5u8b.onrender.com",
-    ],
+    origin: "https://login-system-5u8b.onrender.com",
   })
 );
 
@@ -32,11 +28,11 @@ app.use(express.static(path.join(__dirname, "", "public")));
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "", "public", "index.html"));
 });
-// db.connect((err, connection) => {
-//   if (err) {
-//     throw err;
-//   }
-// });
+db.connect((err, connection) => {
+  if (err) {
+    throw err;
+  }
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}...`);
