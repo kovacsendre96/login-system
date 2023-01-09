@@ -8,7 +8,7 @@ pagesRouter.get("/", loggedIn, (req, res) => {
   res.redirect("/welcome");
 });
 
-pagesRouter.get("/register", loggedIn, (req, res) => {
+pagesRouter.get("/registation", loggedIn, (req, res) => {
   if (req.user) {
     res.redirect("/welcome");
   } else {
